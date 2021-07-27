@@ -9,6 +9,7 @@ function HomePage() {
     <VideosWrapper>
       {videos.items.map((video) => (
         <VideoCard
+          key={video.etag}
           title={video.snippet.title}
           thumbnail={video.snippet.thumbnails.medium.url}
           channelTitle={video.snippet.channelTitle}
