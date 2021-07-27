@@ -8,7 +8,12 @@ function HomePage() {
   return (
     <VideosWrapper>
       {videos.items.map((video) => (
-        <VideoCard video={video} />
+        <VideoCard
+          title={video.snippet.title}
+          thumbnail={video.snippet.thumbnails.medium.url}
+          channelTitle={video.snippet.channelTitle}
+          publishedAt={video.snippet.publishedAt}
+        />
       ))}
     </VideosWrapper>
   );

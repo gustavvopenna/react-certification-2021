@@ -3,13 +3,13 @@ import { Card, CardTitle, CardThumbnail, CardDescription } from './VideoCard.sty
 
 import { formatDate } from '../../utils/date';
 
-function VideoCard({ video }) {
+function VideoCard({ title, thumbnail, channelTitle, publishedAt }) {
   return (
     <Card>
-      <CardThumbnail src={video.snippet.thumbnails.medium.url} />
-      <CardTitle>{video.snippet.title}</CardTitle>
+      <CardThumbnail src={thumbnail} />
+      <CardTitle>{title}</CardTitle>
       <CardDescription>
-        {video.snippet.channelTitle} | {formatDate(video.snippet.publishedAt)}
+        {channelTitle} | {formatDate(publishedAt)}
       </CardDescription>
     </Card>
   );
