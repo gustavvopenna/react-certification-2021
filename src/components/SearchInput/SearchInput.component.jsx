@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function SearchInput(props) {
+function SearchInput({ onInput, ...props }) {
   return (
     <>
-      <Input {...props} />
+      <Input onInput={onInput} {...props} />
     </>
   );
 }
@@ -20,5 +20,9 @@ const Input = styled.input`
 
   :focus {
     outline-color: #8b5cf6;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 40%;
   }
 `;
