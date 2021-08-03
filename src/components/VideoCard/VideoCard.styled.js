@@ -3,14 +3,18 @@ import styled from 'styled-components';
 export const Card = styled.article`
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 14px;
+  overflow: hidden;
   transition: transform 0.2s ease-in-out;
 
   :hover {
     transform: scale(1.01);
   }
+`;
+
+export const CardBody = styled.div`
+  padding: 0.5rem 1rem;
 `;
 
 export const CardThumbnail = styled.img`

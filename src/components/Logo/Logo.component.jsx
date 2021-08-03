@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-function Logo() {
+function Logo({ onClick }) {
   return (
     <>
-      <LogoPlaceholder />
+      <LogoPlaceholder onClick={onClick} />
     </>
   );
 }
@@ -16,4 +16,5 @@ const LogoPlaceholder = styled.div`
   height: 2.5rem;
   border-radius: 2px;
   background-color: #e5e7eb;
+  cursor: pointer;
 `;
